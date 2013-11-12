@@ -1,11 +1,27 @@
 @font-face {
-    font-family: 'bebasneueregular';src: url('../font/bebasneue-webfont.eot');src: url('../font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/bebasneue-webfont.woff') format('woff'),url('../font/bebasneue-webfont.ttf') format('truetype'),
+    font-family: 'bebasneueregular';
+	src: url('../font/bebasneue-webfont.eot');
+	src: url('../font/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/bebasneue-webfont.woff') format('woff'),
+		 url('../font/bebasneue-webfont.ttf') format('truetype'),
 		 url('../font/bebasneue-webfont.svg#bebas_neueregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
-body{background: #e0e0e0; /* Old browsers */
+
+@font-face {
+	font-family: "ITC Avant Garde Gothic";
+	src: url('../font/960906983-avgr45w.eot');
+	src: url('../font/960906983-avgr45w.eot?#iefix') format('embedded-opentype'),
+		 url('../font/960906983-avgr45w.woff') format('woff'),
+		 url('../font/960906983-avgr45w.ttf') format('truetype')
+		 url('../font/960906983-avgr45w.svg#ITC Avant Garde Gothic') format('svg'),;
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+background: #e0e0e0; /* Old browsers */
 background: -moz-linear-gradient(top,  #e0e0e0 0%, #ffffff 12%, #ffffff 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e0e0), color-stop(12%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top,  #e0e0e0 0%,#ffffff 12%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
@@ -15,6 +31,9 @@ background: linear-gradient(to bottom,  #e0e0e0 0%,#ffffff 12%,#ffffff 100%); /*
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
 }
+
+.main-title-header, .secondary-title-header{font-family:"ITC Avant Garde Gothic";}
+
 .tlvn-wrapper{background:#fff; box-shadow: 0px 0px 41px #333;border:0px; margin-top:-5px}
 body, p{margin:0px; padding:0px; font-family:'bebasneueregular'}
 div, footer{background:#eee;border:2px solid #aaa;text-align: center;color:#888;}
@@ -37,6 +56,13 @@ div:hover, footer:hover{background:#aaa;text-align: center;color:#eee;cursor:poi
 @media screen and (min-width: 768px) {
 .menu-mobile, .banner-mobile, .mobile-wrapper, .mobile{display:none;}
 
+/** Modificaciones e integración a diseño **/
+.news-wrapper{height:170px;}
+.news-content{height:150px}
+.news-header{height:20px}
+
+
+
 /** SKYSCRAPPERS **/
 .tlvn-wrapper{position:relative;}
 .centered{height:100%;width:100%;position:fixed;}
@@ -47,7 +73,7 @@ div:hover, footer:hover{background:#aaa;text-align: center;color:#eee;cursor:poi
 
 /** ALTOS **/
 .hero-shot, .footer-links{height:296px;}
-.find-header, .video-header, .news-header, .promotion-header{height:16px;}
+.find-header, .video-header, .promotion-header{height:16px;}
 .breaking-news{height: 26px;top:50px;}
 .menu{height: 31px;top: 45px;}
 .header, .networks{height: 36px;}
@@ -56,13 +82,11 @@ div:hover, footer:hover{background:#aaa;text-align: center;color:#eee;cursor:poi
 .user-autentication{height:126px;}
 .video-content{height:109px}
 .find-content{height:48px}
-.news-content{height:144px}
 .promotion-content{height:116px}
 .news-wrapper > .news{height:162px}
 .promotion{height:136px}
 .video-wrapper{height:131px}
 .find-wrapper{height:66px}
-.news-wrapper{height:166px;}
 header{height:120px;}
 .poll-wrapper{height:281px;}
 .twitter-feed-wrapper, .facebook-feed-wrapper{height:216px;}
@@ -117,3 +141,5 @@ section{width:460px;}
 .tlvn-content, header{width:460px;}
 .tlvn-wrapper{width: 480px;margin: -5px auto;padding: 5px 0px;}
 }
+
+.news-wrapper, .news, .news-header, .news-content, .news-wrapper:hover, .news:hover, .news-header:hover, .news-content:hover{background:transparent; border:0px;}
