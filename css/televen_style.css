@@ -1,0 +1,118 @@
+/** RESETEO DE MAQUETA*/
+header div, .full-banner, .vertical-rectangle-banner, .hero-shot, .know-more, .know-more{background:transparent;border:0; text-align:left;}
+header div:hover, .full-banner:hover, .vertical-rectangle-banner:hover, .hero-shot:hover, .know-more:hover{background:transparent;border:0; text-align:left;}
+ul, li{margin:0;padding:0}
+
+/** INICIO DE ESTILOS PROPIOS */
+@font-face {
+	font-family: "ITC_Avant_Garde_Gothic";
+	src: url('../font/avgr45w.eot');
+	src: url('../font/avgr45w.eot?#iefix') format('embedded-opentype'),
+		 url('../font/avgr45w.woff') format('woff'),
+		 url('../font/avgr45w.ttf') format('truetype')
+		 url('../font/avgr45w.svg#ITC Avant Garde Gothic') format('svg'),;
+	font-weight: normal;
+	font-style: normal;
+}
+
+a{border:0;}
+header, header p, .hero-shot, .hero-shot p{font-family:"Raleway", sanserif;color:#545454}
+/** COLORES */
+.red{color:#eb0000;}
+.grey{color: #545454;}
+
+/** HEADER */
+.header{width:700px; height:40px;}
+
+/** REDES */
+.networks{width:240px; height:40px;}
+.networks p{ font-weight:600; font-size:13.5}
+.networks-1{letter-spacing: 0.6;}
+.networks > .title{width: 79px;float:left;margin-top:4px;border-right: 1px solid #545454}
+.networks > .icons{float:right;}
+.networks ul li{list-style:none;float:left;}
+
+/** MENU */
+.menu{width:960px;height:40px; font-size:14.5;font-weight:600}
+.menu-left ul{height: 40px;width: 700px;}
+.menu-left ul li{width:115px; float:left;list-style:none;height:40px;position:relative;top:-30px;}
+.menu-left ul li:hover{cursor:pointer;}
+.T10_0{float: right;position: relative;top: -40px;}
+.menu-plus{position:relative;display:none;}
+
+/** BREAKING NEWS */
+.breaking-news, .breaking-news:hover{
+background: url('../assets/breaking_news/bkn-bg.jpg'); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzViNWI1YiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNzE3MTciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  #5b5b5b 0%, #171717 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5b5b5b), color-stop(100%,#171717)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5b5b5b 0%,#171717 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5b5b5b 0%,#171717 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5b5b5b 0%,#171717 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #5b5b5b 0%,#171717 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b5b5b', endColorstr='#171717',GradientType=0 ); /* IE6-8 */
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+width:960px;
+height:30px;
+}
+
+.breaking-news > .icon{position: relative;left: -690px;}
+.breaking-news > .overflow{width: 775px;overflow: hidden;position: relative;top: -33px;left: 30px;}
+.breaking-news > .overflow > .news{position:relative;width:10000px;}
+.breaking-news > .overflow > .news ul li{float:left;font-size:13;color:#fff;margin-right:5px}
+.breaking-news .circle{background:#eb0000;width:5px; height:5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;float: left;position: relative;top: 5px;left: 0px;margin-right: 5px;}
+.breaking-news > .bars{float: right;margin-top: -55px;border-radius: 5px;}
+
+/***/
+section, aside{margin-top:5px}
+
+/** HEROSHOOT */
+.hero-active{opacity:0.7}
+.hero-shot{width:700px;height:300px;overflow:hidden;}
+.hero-shot ul li{list-style-type:none;float:left}
+.hero-images{width: 2200px;height: 300px;background: transparent;border: 0;position: relative;top: -600px;z-index: 1;}
+.hero-wrapper-bg{height: 270px;position: relative;top: -290px;background: #000;opacity: 0.60;width: 240px;border-radius: 10px;left: 440px;padding: 5px;
+border:0;
+}
+.hero-wrapper{background:transparent;boder:0;position: relative;top: -585px;width: 230px;left: 440px;padding: 5px 10px;
+border:0;
+}
+.hero-wrapper h5{width:210px;text-align: left;font-size: 23;padding: 0;margin: 20px 0px 10px 0px;color: #fff;}
+.hero-wrapper-bg:hover{background:#000;border:0}
+.hero-wrapper:hover{background:transparent;border:0}
+.hero-wrapper p{font-size:14px;text-align:justify;color:#fff; font-family:arial}
+.hero-indicator-wrapper{position: relative;width: 700px;height: 300px;border: 0;background:transparent;z-index:5;}
+.hero-indicator-wrapper:hover{border: 0;background:transparent}
+.know-more{position: relative;top: 23px;left: 660px;width: 30px;height: 30px;cursor:pointer}
+.know-more-bg{background: #fff;opacity: 0.35;width: 25px;height: 25px;border-radius: 20px;border: 0;}
+.know-more .plus{background: transparent;border: 0;width: 20px;height: 20px;position: relative;top: -31px;left: 2px;}
+.know-more .plus p{opacity:0.4;color: #fff;font-family: arial;font-size: 32px;font-weight: bold;}
+.know-more .plus p:hover{opacity:0.8;}
+.know-more-bg:hover{background:#fff;border:0}
+.navigators{position: relative;top: 220px;width: 45px;height:45px;left: 5px;}
+.navigators:hover{background:transparent;border:0;}
+.navigators-bg{background: #fff;opacity: 0.35;width: 20px;height: 20px;border-radius: 20px;border: 0;}
+.navigators-bg:hover{background: #fff;border: 0;}
+.indicator:hover{background:transparent;border: 0;}
+.indicator{width: 20px;height: 20px;}
+.indicator p{opacity:0.4;color: #fff;font-family: arial;font-size: 22px;font-weight: bold;position: relative;}
+.indicator p:hover{opacity:0.8;}
+.left .indicator p{top: -25px;left: -2px;}
+.right .indicator p{top: -25px;left: 0px;}
+.navigators .left, .navigators .right, .navigators p, .indicator, .navigators{background:transparent;border:0;}
+.navigators .left{float:left; cursor:pointer;position: relative;top: 5px;}
+.navigators .right{float:right; cursor:pointer;position: relative;top: 5px;}
+.counter{width: 695px;background: transparent;border: 0;position: relative;top: 255px;}
+.counter:hover{background: transparent;border: 0;}
+.counter ul{width: 695px;height: 20px;}
+.counter ul li{cursor:pointer;list-style-type: none;width: 10px;height: 10px;background: #fff;opacity: 0.35;border-radius: 10;float: right;margin-right: 5px;}
+.counter ul li:hover{opacity:0.6}
+.hero-shine{position:relative;top:-300px;z-index: 3;background: transparent;border: 0;left:-700px}
+.hero-shine:hover{background: transparent;border: 0;}
+
+/** BANNERS */
+.full-banner{width:700px; height:90px;}
+.vertical-rectangle-banner{width:240px;height:400px;}
