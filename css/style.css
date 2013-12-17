@@ -21,8 +21,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', end
 
 }
 
-.main-title-header, .secondary-title-header{font-family:"ITC Avant Garde Gothic";}
-
 .tlvn-wrapper{background:#fff; box-shadow: 0px 0px 41px #333;border:0px; margin-top:-5px}
 body, p{margin:0px; padding:0px; font-family:'bebasneueregular'}
 div, footer{background:#eee;border:2px solid #aaa;text-align: center;color:#888;}
@@ -45,13 +43,6 @@ div:hover, footer:hover{background:#aaa;text-align: center;}
 @media screen and (min-width: 768px) {
 .menu-mobile, .banner-mobile, .mobile-wrapper, .mobile{display:none;}
 
-/** Modificaciones e integración a diseño **/
-.news-wrapper{height:170px;}
-.news-content{height:150px}
-.news-header{height:20px}
-
-
-
 /** SKYSCRAPPERS **/
 .tlvn-wrapper{position:relative;}
 .centered{height:100%;width:100%;position:fixed;}
@@ -71,24 +62,24 @@ div:hover, footer:hover{background:#aaa;text-align: center;}
 .user-autentication{height:126px;}
 .video-content{height:109px}
 .find-content{height:48px}
-.promotion-content{height:116px}
+.promotion-content{height:156px}
 .news-wrapper > .news{height:162px}
-.promotion{height:136px}
+.promotion{height:176px}
 .video-wrapper{height:131px}
 .find-wrapper{height:66px}
 header{height:120px;}
-.poll-wrapper{height:281px;}
-.twitter-feed-wrapper, .facebook-feed-wrapper{height:216px;}
+.poll-wrapper{height:345px;}
+.twitter-feed-wrapper, .facebook-feed-wrapper{height:270px;}
 .vertical-rectangle-banner{height:396px}
-footer{height:6px;margin-top: 1685px;}
+footer{height:6px;margin-top: 2183px;}
 
 /** ANCHOS **/
 .user-autentication, .vertical-rectangle-banner, .poll-wrapper, .twitter-feed-wrapper, .facebook-feed-wrapper{width:236px}
 .networks, aside{width:240px;}
 .news-wrapper > .news, .promotion, .news-header, .promotion-header, .news-content, .promotion-content{width:336px;}
-.header, .hero-shot, .footer-links, .find-wrapper, .video-wrapper, .news-wrapper, .find-header, .video-header, .find-content, .video-content, .full-banner{width:696px}
+.header, .hero-shot, .find-wrapper, .video-wrapper, .news-wrapper, .find-header, .video-header, .find-content, .video-content, .full-banner{width:696px}
 section{width:700px;}
-.menu, .breaking-news, footer{width:956px}
+.menu, .breaking-news, footer, .footer-links{width:956px}
 .tlvn-content, header{width:960px;}
 .tlvn-wrapper{width: 1024px;margin: -5px auto;padding: 5px 0px;}
 }

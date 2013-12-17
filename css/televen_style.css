@@ -113,6 +113,49 @@ border:0;
 .hero-shine{position:relative;top:-300px;z-index: 3;background: transparent;border: 0;left:-700px}
 .hero-shine:hover{background: transparent;border: 0;}
 
+/** NEWS */
+.news-wrapper{height:170px;font-family:"Raleway", sanserif;color:#545454;overflow:hidden;}
+.news-content{height:150px;cursor:pointer;overflow:hidden}
+.news-header{height:20px;}
+.main-title-header, .secondary-title-header{font-family:"Raleway", sanserif;color:#545454;font-weight:600}
+.main-title-header span, .secondary-title-header span{color:#eb0000;}
+.main-title-header{float:left;}
+.secondary-title-header{float:right;font-size:12px;padding-top:5px;}
+.overflowed-images{position:relative;top:-25px;overflow:hidden;}
+.overflowed-images, .news-one, .news-bar, .newss{background:transparent;border:0;}
+.overflowed-images:hover, .news-one:hover, .news-bar:hover, .newss:hover{background:transparent;border:0;}
+.news-wrapper .news-bar{height: 25px;background: #000;width: 340px;opacity: 0.8;position: relative;top: 125px;z-index: 4;}
+.overflowed-images p{position: relative;font-family: "Raleway", sanserif;font-size: 15;color: #fff;top: -22px;text-align: left;padding-left: 5px;z-index: 5;}
+.news-wrapper ul li{list-style-type:none;float:left;}
+
+/** NETWORKS */
+.twitter-feed-wrapper{background:transparent;border:0;height:270px;width:240px;}
+.twitter-feed-wrapper:hover{background:transparent;border:0;}
+
+/** YOURE WATCHING */
+.youre-watching, .youre-watching div{background:transparent;border:0;}
+.youre-watching:hover{background:transparent;border:0;}
+.youre-watching ul li{list-style-type:none;float:left;}
+.youre-watching .programs{background: #f00;float: left;height: 41px;width:470px;}
+.youre-watching .title{float: right;width: 230px;height: 41px;background: #000;}
+.youre-watching .hours{background: #202020;height: 15px;font-family: Raleway;color: #fff;font-size: 10px;position: relative;top: 41px;}
+.youre-watching .hours ul{position: relative;top: -37px;}
+.youre-watching .hours ul li{width:97px;border-right:1px solid #fff;text-align:right;padding-right:2px;}
+
+/** PROMOTIONS */
+.promotions-wrapper, .promotions-wrapper div{background:transparent;border:0px;cursor:pointer;}
+.promotions-wrapper:hover, .promotions-wrapper div:hover{background:transparent;border:0px;}
+.promotions-wrapper .container-right .four .promotion-content{position:relative; top:-342px}
+.promotions-wrapper .container-right .three .promotion-content{position:relative; top:-525px}
+.promotions-wrapper .container-right .two .promotion-content{position:relative; top:-705px}
+.promotions-wrapper .container-right .one .promotion-content{position:relative; top:-886px}
+.promotions-wrapper .container-right .five .mask{top:-162px;}
+.promotions-wrapper .container-right .five .movie{top:-322px;}
+.promotion .mask{position:relative;z-index:3}
+.promotion .movie{position:relative;top:-160px}
+/** FOOTER */
+footer{background:transparent;border:0;font-size:8px;font-family:Raleway;}
+footer:hover{background:transparent;border:0;}
 /** BANNERS */
-.full-banner{width:700px; height:90px;}
-.vertical-rectangle-banner{width:240px;height:400px;}
+.full-banner{width:700px; height:90px;cursor:pointer;}
+.vertical-rectangle-banner{width:240px;height:400px;cursor:pointer;}

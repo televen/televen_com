@@ -11,6 +11,9 @@ $(function(){
 	hs = new HeroShot();
 	hs.init();
 	
+	ns = new News();
+	ns.init();
+	
 	$(".programs").click(function() {
 		$('html, body').animate({
 			scrollTop: $("footer").offset().top
