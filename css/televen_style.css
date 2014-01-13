@@ -1,6 +1,6 @@
 /** RESETEO DE MAQUETA*/
-header div, .full-banner, .vertical-rectangle-banner, .hero-shot, .know-more, .know-more{background:transparent;border:0; text-align:left;}
-header div:hover, .full-banner:hover, .vertical-rectangle-banner:hover, .hero-shot:hover, .know-more:hover{background:transparent;border:0; text-align:left;}
+.facebook-feed-wrapper div,.facebook-feed-wrapper, .footer-links, .column, header div, .full-banner, .vertical-rectangle-banner, .hero-shot, .know-more, .know-more{background:transparent;border:0; text-align:left;}
+.facebook-feed-wrapper div:hover,.facebook-feed-wrapper:hover, .footer-links:hover, .column:hover, header div:hover, .full-banner:hover, .vertical-rectangle-banner:hover, .hero-shot:hover, .know-more:hover{background:transparent;border:0; text-align:left;}
 ul, li{margin:0;padding:0}
 
 /** INICIO DE ESTILOS PROPIOS */
@@ -136,11 +136,19 @@ border:0;
 .youre-watching, .youre-watching div{background:transparent;border:0;}
 .youre-watching:hover{background:transparent;border:0;}
 .youre-watching ul li{list-style-type:none;float:left;}
-.youre-watching .programs{background: #f00;float: left;height: 41px;width:470px;}
+.youre-watching .programs{background: #aaa;float: left;height: 41px;width:470px;}
+.youre-watching .programs p{font-family: Arial;color: #fff;font-weight: bold;line-height: 41px;text-align: left;margin-left: 5px;}
+.youre-watching .programs .arrow{width: 0;height: 0;border-top: 20px solid transparent;border-bottom: 22px solid transparent;border-left: 40px solid #00326a;position: absolute;left: 160px;top: 925px;}
+.youre-watching .programs .active{height: 41px;width: 130px;background: #00326a;}
+.youre-watching .programs .previous{margin-left: 40px;}
 .youre-watching .title{float: right;width: 230px;height: 41px;background: #000;}
+.youre-watching .title p{line-height: 35px;font-family: "Raleway", sanserif;color: #fff;font-weight: 600;font-size: 25px;}
 .youre-watching .hours{background: #202020;height: 15px;font-family: Raleway;color: #fff;font-size: 10px;position: relative;top: 41px;}
 .youre-watching .hours ul{position: relative;top: -37px;}
 .youre-watching .hours ul li{width:97px;border-right:1px solid #fff;text-align:right;padding-right:2px;}
+.youre-watching .title .arrow{width: 0;height: 0;border-top: 15px solid transparent;border-bottom: 15px solid transparent;border-left: 10px solid #aaa;position: absolute;left: 715px;top: 930px;}
+.youre-watching .hours .arrow{width: 0;height: 0;border-top: 8px solid transparent;border-bottom: 8px solid transparent;border-left: 10px solid #6a6a6a;position: absolute;left: 104px;top: 0px;}
+.youre-watching .hours .bar{height: 15px;width: 104px;background: #6a6a6a;}
 
 /** PROMOTIONS */
 .promotions-wrapper, .promotions-wrapper div{background:transparent;border:0px;cursor:pointer;}
@@ -162,9 +170,19 @@ border:0;
 .promotion-info .info-title-container .title{position: relative;top: -7px;width: 340px;font-size: 18px;color: #fff;font-weight: bold;font-family: Raleway;line-height: 40px;}
 .promotion-info .info-data{position: relative;top: -160px;padding: 5px;width: 330px;height: 77px;color: #fff;font-size: 15px;}
 .promotion-info .info-data p{font-family:Arial}
+
+/*FOOTER LINKS*/
+.footer-links{margin-top:10px;width:960px;height:520px;border-top: 1px solid #969696;border-bottom: 1px solid #969696;}
+.footer-links h4{font-size:16px;color:#545454; font-family:"Raleway"}
+.footer-links p{font-size:11px;color:#0376d7; font-family:Verdana;cursor:pointer;}
+.footer-links .column{float:left;width:239px}
+.footer-links li{height:30px;list-style:none;}
+.footer-links li p:first-child{width:30px; height:30px;overflow:hidden;}
+.footer-links li p{float:left;}
 /** FOOTER */
 footer{background:transparent;border:0;font-size:8px;font-family:Raleway;}
 footer:hover{background:transparent;border:0;}
 /** BANNERS */
 .full-banner{width:700px; height:90px;cursor:pointer;}
 .vertical-rectangle-banner{width:240px;height:400px;cursor:pointer;}
+.centered{display:none;}
