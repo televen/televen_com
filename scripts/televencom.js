@@ -5,6 +5,12 @@ $(function(){
 		$(this).children(".menu-plus").fadeOut("fast");
 	});
 	
+	$(".promotion").mouseenter(function(){
+		$(this).children(".promotion-info").toggleClass("hover");
+	}).mouseleave(function(){
+		$(this).children(".promotion-info").toggleClass("hover");
+	});
+	
 	br = new BreakingNews();
 	br.init();
 	

@@ -145,14 +145,23 @@ border:0;
 /** PROMOTIONS */
 .promotions-wrapper, .promotions-wrapper div{background:transparent;border:0px;cursor:pointer;}
 .promotions-wrapper:hover, .promotions-wrapper div:hover{background:transparent;border:0px;}
-.promotions-wrapper .container-right .four .promotion-content{position:relative; top:-342px}
-.promotions-wrapper .container-right .three .promotion-content{position:relative; top:-525px}
-.promotions-wrapper .container-right .two .promotion-content{position:relative; top:-705px}
-.promotions-wrapper .container-right .one .promotion-content{position:relative; top:-886px}
-.promotions-wrapper .container-right .five .mask{top:-162px;}
-.promotions-wrapper .container-right .five .movie{top:-322px;}
+.promotion{overflow:hidden}
 .promotion .mask{position:relative;z-index:3}
 .promotion .movie{position:relative;top:-160px}
+.promotion-info{
+	-webkit-transition: all 250ms linear;
+    -moz-transition: all 250ms linear;
+    -o-transition: all 250ms linear;
+    transition: all 250ms linear;
+	font-family: Raleway;position: relative;top: -153px;left:340px;width: 340px;height: 160px;}
+.promotion .hover{left:0px;}
+.promotion-info p{font-family: Raleway;}
+.promotion-info .info-bg{background: #000;opacity: 0.6;height: 160px;width: 340px;position: relative;}
+.promotion-info .info-title-container{position: relative;top: -160px;width: 340px;height: 73px;}
+.promotion-info .info-title-container .title-background{background: #fff;opacity: 0.4;position: relative;height: 40px;top: 33px;width: 340px;}
+.promotion-info .info-title-container .title{position: relative;top: -7px;width: 340px;font-size: 18px;color: #fff;font-weight: bold;font-family: Raleway;line-height: 40px;}
+.promotion-info .info-data{position: relative;top: -160px;padding: 5px;width: 330px;height: 77px;color: #fff;font-size: 15px;}
+.promotion-info .info-data p{font-family:Arial}
 /** FOOTER */
 footer{background:transparent;border:0;font-size:8px;font-family:Raleway;}
 footer:hover{background:transparent;border:0;}
