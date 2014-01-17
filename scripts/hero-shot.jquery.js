@@ -1,5 +1,7 @@
 $(function(){
 	$(".navigators .left").live("click", function(){
+		$(".hero-images").stop();
+		console.debug(hs.timeout);
 		hs.animatePieces('left');
 	});
 
@@ -45,12 +47,11 @@ HeroShot.prototype.animateShine = function(){
 	var timer = this.timer_change;
 	$(this.shine).animate({left:"700px"}, this.timer_shine, "linear", function(){
 		this.timeout = setTimeout("hs.animateShine()", timer);
-	})
+	});
 }
 
 HeroShot.prototype.animatePieces = function(direction){
 	clearTimeout(this.timeout);
-	$(this.navigators).hide();
 	var temp_html 	= ""; 
 	var id 			= 0;
 	var id_actual	= 0;
@@ -68,18 +69,20 @@ HeroShot.prototype.animatePieces = function(direction){
 	var navigators	= this.navigators;
 	
 	$(".hero-active").removeClass("hero-active");
+	$(".hero-wrapper-bg, .hero-wrapper").fadeOut("slow");
 	var dir = (direction == "left") ? "-" : "+";
 	temp_html = (direction == "left") ? $(photo).first().html() : $(photo).last().html();
 	id = (direction == "left") ? $(photo).first().attr("id") : $(photo).last().attr("id");
+	
 	if(direction != "left"){
 		$(photo).last().remove();
 		$(photo_list).prepend("<li class='" + id + "' id='" + id + "'>" + temp_html + "</li>");
 		$(photos).css({left:"-700px"});
-	}
-	
+	}	
 	
 	$(this.photos).animate({left:(dir + "=700px")}, this.timer_change, "linear", function(){
 		if(counter == 0){
+			$(".hero-wrapper-bg, .hero-wrapper").fadeIn("slow");
 			if(direction == "left"){
 				$(photo).first().remove();
 				$(photo_list).append("<li class='" + id + "' id='" + id + "'>" + temp_html + "</li>");
@@ -93,7 +96,6 @@ HeroShot.prototype.animatePieces = function(direction){
 			
 			$(left_arrow).data("piece", id);
 			$(right_arrow).data("piece", id_next);
-			$(navigators).show();
 			timeout = setTimeout("hs.animatePieces('" + direction + "')", timer);
 		}
 		counter++;
