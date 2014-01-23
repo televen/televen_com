@@ -39,8 +39,17 @@
 .transition(@css:all, @time, @easing: ease-out){
 	-webkit-transition: @css @time @easing;
 	   -moz-transition: @css @time @easing;
+	    -ms-transition: @css @time @easing;
 	     -o-transition: @css @time @easing;
 		    transition: @css @time @easing;
+}
+
+.transition-delay(@delay){
+-webkit-transition-delay: @delay;
+   -moz-transition-delay: @delay;
+     -o-transition-delay: @delay;
+    -ms-transition-delay: @delay;
+        transition-delay: @delay;
 }
 
 .shadow(@horizontal, @vertical, @blur, @spread, @color) {
@@ -55,6 +64,15 @@
 	border-top: @top solid transparent;
 	border-bottom: @bottom solid transparent;
 	border-left: @left solid @color;
+	position: absolute;
+}
+
+.arrow-right(@top, @bottom, @right, @color){
+	width: 0;
+	height: 0;
+	border-top: @top solid transparent;
+	border-bottom: @bottom solid transparent;
+	border-right: @right solid @color;
 	position: absolute;
 }
 
@@ -134,15 +152,15 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 */
 }
 
-.hero-wrapper-bg, .news-wrapper .news-bar, .youre-watching .title, .promotion-info .info-bg{
+.video-content, .hero-wrapper-bg, .news-wrapper .news-bar, .youre-watching .title, .promotion-info .info-bg{
 	background: @black;
 }
 
-.know-more-bg, .counter ul li:hover, .navigators-bg, .promotion-info .info-title-container .title-background, .tlvn-wrapper{
+.video-content .roll ul li, .know-more-bg, .counter ul li:hover, .navigators-bg, .promotion-info .info-title-container .title-background, .tlvn-wrapper{
 	background: @white;
 }
 
-footer, .grey, .footer-links h4{
+footer, .grey, .footer-links h4, .video-info{
 	color: @light-grey;
 }
 
@@ -163,15 +181,16 @@ header, header p, .hero-shot, .hero-shot p, .news-wrapper{
 }
 	
 .breaking-news > .overflow > .news ul li, .hero-wrapper h5, .hero-wrapper p, .know-more .plus p, .indicator p, .overflowed-images p, .youre-watching .programs p, 
-.youre-watching .title p, .youre-watching .hours, .promotion-info .info-title-container .title, .promotion-info .info-data{
+.youre-watching .title p, .youre-watching .hours, .promotion-info .info-title-container .title, .promotion-info .info-data, 
+.video-content .videos .content .thumb-info{
 	color: @white;
 }
 
-.know-more .plus p, .indicator p, .youre-watching .hours, .poll-wrapper, .hero-wrapper p{
+.know-more .plus p, .indicator p, .youre-watching .hours, .poll-wrapper, .hero-wrapper p, .video-description{
 	font-family: @arial;
 }
 
-.promotion-info .info-data p, .footer-links p{
+.promotion-info .info-data p, .footer-links p, .video-info{
 	font-family: @verdana;
 }
 
@@ -183,7 +202,7 @@ body{
 	.avant-garde
 }
 
-footer{
+footer, .video-info{
 	font-size: 8px;
 }
 
@@ -191,7 +210,7 @@ footer{
 	font-size: 11px;
 }
 
-.breaking-news > .overflow > .news ul li{
+.breaking-news > .overflow > .news ul li, .video-description{
 	font-size: 12px;
 }
 
@@ -207,7 +226,7 @@ footer{
 	font-size: 16px;
 }
 
-.menu-plus{
+.menu-plus, .video-title{
 	font-size: 17px;
 }
 
@@ -251,23 +270,37 @@ footer{
 	display:none;
 }
 
-.breaking-news > .overflow, .hero-shot, .hero-indicator-wrapper, .news-wrapper, .news-content, .overflowed-images, .promotion, .footer-links li p:first-child{
+.video-content .videos .content, .breaking-news > .overflow, .hero-shot, .hero-indicator-wrapper, .news-wrapper, .news-content, .overflowed-images, .promotion, .footer-links li p:first-child{
 	overflow: hidden;
 }
 
-.gradient-left, .gradient-right, .breaking-news .circle, .breaking-news > .overflow > .news, .breaking-news > .overflow, .breaking-news > .icon,
+.video-content .roll ul, .gradient-left, .gradient-right, .breaking-news .circle, .breaking-news > .overflow > .news, .breaking-news > .overflow, .breaking-news > .icon,
  .T10_0, .menu-plus, .menu-left ul li, .hero-shine, .hero-wrapper, .hero-wrapper-bg, .hero-images, .hero-indicator-wrapper,
  .know-more, .know-more .plus, .counter, .navigators, .indicator p, .navigators .left, .navigators .right, .menu, .breaking-news, .menu > .pc, .overflowed-images, 
  .news-wrapper .news-bar, .overflowed-images p, .youre-watching .hours, .youre-watching .hours ul, .youre-watching .title, .promotion .mask, .promotion .movie,
  .promotion-info, .promotion-info .info-bg, .promotion-info .info-title-container, .promotion-info .info-title-container .title-background, 
- .promotion-info .info-title-container .title, .promotion-info .info-data{
+ .promotion-info .info-title-container .title, .promotion-info .info-data, .video-content .navigation-wrapper-right, .video-content .navigation-wrapper-left, 
+ .video-content .videos .content{
 	position: relative;
 }
 
-.hero-indicator-wrapper{
+.video-info{
+	position:absolute;
+	top: 78px;
+	left: 370px
+}
+
+.hero-indicator-wrapper, .thumb-info{
 	.opacity(0);
-	z-index:5;
 	.transition(opacity, 0.3s, ease-out);
+}
+/*
+.thumb-info{
+	.transition-delay(0.1s);
+}*/
+
+.hero-indicator-wrapper{
+	z-index:5;
 }
 
 .know-more-bg, .counter ul li, .navigators-bg{
@@ -290,12 +323,13 @@ footer{
 	.opacity(0.8);
 }
 
-.hero-indicator-wrapper:hover{
+.hero-indicator-wrapper:hover, .video-content .videos .content ul li:hover .thumb-info{
 	.opacity(1);
 }
 
 .know-more, .counter ul li, .navigators .left, .navigators .right, .menu-left ul li:hover, .news-content, .promotions-wrapper, .promotions-wrapper div, .footer-links p,
- .full-banner, .vertical-rectangle-banner{
+ .full-banner, .vertical-rectangle-banner, .video-content .navigation-wrapper-left, .video-content .navigation-wrapper-right, 
+ .video-content .videos .content ul li{
 	cursor:pointer;
 }
 
@@ -303,7 +337,15 @@ ul, li, body, p{
 	margin:0;
 }
 
-section, aside, .tlvn-content, .find-wrapper, .video-wrapper, .news-wrapper, .full-banner, .promotions-wrapper, .mobile-wrapper, .youre-watching, .vertical-rectangle-banner{
+.video-content .up ul{
+	top:2px;
+}
+
+.video-content .down ul{
+	top:11px;
+}
+
+.networks ul, section, aside, .tlvn-content, .find-wrapper, .video-wrapper, .news-wrapper, .full-banner, .promotions-wrapper, .mobile-wrapper, .youre-watching, .vertical-rectangle-banner{
 	margin-top:5px
 }
 
@@ -315,7 +357,7 @@ section, aside, .tlvn-content, .find-wrapper, .video-wrapper, .news-wrapper, .fu
 	margin-bottom:5px
 }
 
-.breaking-news > .overflow > .news ul li, .breaking-news .circle, .counter ul li{
+.video-content .roll ul li, .networks ul li, .breaking-news > .overflow > .news ul li, .breaking-news .circle, .counter ul li{
 	margin-right:5px
 }
 
@@ -327,6 +369,18 @@ ul, li, body, p, .hero-wrapper h5{
 	.arrow-left(20px, 22px, 40px, @dark-blue);
 	left: 162px;
 	top: 917px;
+}
+
+.video-content .navigation-wrapper-left .arrow{
+	.arrow-right(20px, 20px, 15px, @white);
+	top: 35px;
+	left: 5px;
+}
+
+.video-content .navigation-wrapper-right .arrow{
+	.arrow-left(20px, 20px, 15px, @white);
+	top: 35px;
+	left: 5px;
 }
 
 .youre-watching .title .arrow{
@@ -341,8 +395,12 @@ ul, li, body, p, .hero-wrapper h5{
 	top: 0px;
 }
 
-.breaking-news, .breaking-news:hover, .breaking-news > .bars > img, .breaking-news .circle, .counter ul li{
+.video-content .roll ul li, .breaking-news, .breaking-news:hover, .breaking-news > .bars > img, .breaking-news .circle, .counter ul li{
 	.radius;
+}
+
+.video-content img{
+	.radius(10px);
 }
 
 .know-more-bg, .navigators-bg{
@@ -353,13 +411,14 @@ ul, li, body, p, .hero-wrapper h5{
 	.transition(opacity, 0.3s, ease-out);
 }
 
-.counter ul li, .hero-shot ul li, .networks ul li, .menu-left ul li, .news-wrapper ul li, .youre-watching ul li, .footer-links ul li{
+.video-content ul li, .counter ul li, .hero-shot ul li, .networks ul li, .menu-left ul li, .news-wrapper ul li, .youre-watching ul li, .footer-links ul li{
 	list-style-type: none;
 }
 
-.networks > .title, .breaking-news .circle, .breaking-news > .overflow > .news ul li, .navigators .left, .hero-shot ul li, .networks ul li, .menu-left ul li, 
+.video-content .roll ul li, .networks > .title, .breaking-news .circle, .breaking-news > .overflow > .news ul li, .navigators .left, .hero-shot ul li, .networks ul li, .menu-left ul li, 
  .news-wrapper > .one, .container-left, .header, section, .menu-mobile, .header, .poll-mobile, .main-title-header, .news-wrapper ul li, .youre-watching ul li, 
- .youre-watching .programs, .footer-links .column, .footer-links li p{
+ .youre-watching .programs, .footer-links .column, .footer-links li p, .video-content .navigation-wrapper-right, .video-content .navigation-wrapper-left, .video-content .videos,
+ .video-content .videos .content ul li, .video-content .videos .content .thumb, .video-content .videos .content .thumb-info{
 	float:left; 
 }
 
@@ -368,15 +427,29 @@ ul, li, body, p, .hero-wrapper h5{
 	float:right;
 }
 
+/*.video-content .videos .content{
+	overflow:hidden;
+}*/
+
+.video-content .videos .content .video-list > li{
+	width:145px;
+	height:80px;
+	.transition(width, 0.5s, ease-out);
+}
+
 .breaking-news .circle, .counter ul li{
 	width: 5px;
+}
+
+.video-content .roll ul li{
+	width:12px;
 }
 
 .indicator, .navigators-bg, .know-more .plus{
 	width: 20px;
 }
 
-.know-more-bg{
+.know-more-bg, .video-content .navigation-wrapper-right, .video-content .navigation-wrapper-left{
 	width: 25px;
 }
 
@@ -388,6 +461,10 @@ ul, li, body, p, .hero-wrapper h5{
 	width: 104px;
 }
 
+.video-content .videos .content .thumb{
+	width: 145px;
+}
+
 .hero-wrapper, .youre-watching .title{
 	width: 230px;
 }
@@ -396,8 +473,12 @@ ul, li, body, p, .hero-wrapper h5{
 	width:239px;
 }
 
-.networks, .vertical-rectangle-banner, .poll-wrapper, .twitter-feed-wrapper, .hero-wrapper-bg{
+.vertical-rectangle-banner, .poll-wrapper, .twitter-feed-wrapper, .hero-wrapper-bg{
 	width:240px;
+}
+
+.networks{
+	width: 245px
 }
 
 .news-wrapper .news-bar, .promotion-info .info-title-container .title, .promotion-info .info-title-container .title-background, 
@@ -409,11 +490,19 @@ ul, li, body, p, .hero-wrapper h5{
 	width:470px;
 }
 
+.video-content .videos .content .thumb-info{
+	width: 505px;
+}
+
+.video-content .videos, .video-content .videos .content ul li:hover, .thumb-wrapper{
+	width:650px;
+}
+
 .counter, .counter ul{
 	width: 695px;
 }
 
-.full-banner, .header, .hero-shot, .hero-indicator-wrapper{
+.video-header, .video-content, .full-banner, .header, .hero-shot, .hero-indicator-wrapper{
 	width:700px; 
 }
 
@@ -425,7 +514,7 @@ ul, li, body, p, .hero-wrapper h5{
 	width:960px;
 }
 
-.breaking-news > .overflow > .news{
+.breaking-news > .overflow > .news, .video-list-wrapper{
 	width:10000px;
 }
 
@@ -433,11 +522,15 @@ ul, li, body, p, .hero-wrapper h5{
 	height:5px;
 }
 
+.video-content .roll ul li{
+	height: 7px;
+}
+
 .youre-watching .hours .bar, .youre-watching .hours{
 	height: 15px;
 }
 
-.news-header, .indicator, .navigators-bg, .know-more .plus, .counter ul{
+.video-header, .news-header, .indicator, .navigators-bg, .know-more .plus, .counter ul{
 	height: 20px;
 }
 
@@ -457,8 +550,17 @@ ul, li, body, p, .hero-wrapper h5{
 	height: 41px;
 }
 
-.full-banner{
+.video-content .videos .content{
+	height:93px;
+	top:11px;
+}
+
+.full-banner, .video-content .videos .content{
 	height:90px;
+}
+
+.video-content, .video-content .videos, .video-content .navigation-wrapper-right, .video-content .navigation-wrapper-left{
+	height:115px;
 }
 
 .news-content{
@@ -490,13 +592,12 @@ ul, li, body, p, .hero-wrapper h5{
 }
 
 /* desde este punto */
-
 .tlvn-content{
 	margin-left: 32px;
 	margin-right: 32px;
 }
 
-.menu > .pc {
+.menu > .pc, .menu-left ul li, .breaking-news > .icon{
 	top: -30px;
 }
 
@@ -514,7 +615,6 @@ ul, li, body, p, .hero-wrapper h5{
 
 .menu-left ul li{
 	width:119px;
-	top:-30px;
 }
 
 .T10_0{
@@ -525,7 +625,7 @@ ul, li, body, p, .hero-wrapper h5{
 	z-index:6;
 }
 
-.gradient-left{
+.gradient-left, .breaking-news > .overflow{
 	left: 30px;
 }
 
@@ -536,19 +636,15 @@ ul, li, body, p, .hero-wrapper h5{
 
 .breaking-news > .icon{
 	left: -713px;
-	top:-30px;
 }
 
 .breaking-news > .overflow{
 	width: 765px;
 	top: -54px;
-	left: 30px;
 }
 
 .breaking-news .circle{
 	background: @red;
-	top: 5px;
-	left: 0px;
 }
 
 .breaking-news > .bars{
@@ -631,7 +727,7 @@ ul, li, body, p, .hero-wrapper h5{
 	top: -25px;
 }
 
-.navigators .left, .navigators .right{
+.navigators .left, .navigators .right, .breaking-news .circle{
 	top: 5px;
 }
 
@@ -713,7 +809,8 @@ ul, li, body, p, .hero-wrapper h5{
 	left: 340px;
 	height: 156px;
 }
-.promotion .hover{
+
+.promotion .hover, .breaking-news .circle{
 	left:0px;
 }
 
