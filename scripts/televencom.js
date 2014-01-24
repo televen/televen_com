@@ -25,4 +25,10 @@ $(function(){
 			scrollTop: $("footer").offset().top
 		}, 1000);
 	});
+		
+	var counter = 0;
+	$.each(".video-list > li", function(){
+		$(this).attr("data-counter", counter);
+		counter++;
+	});
 });

@@ -270,7 +270,7 @@ footer, .video-info{
 	display:none;
 }
 
-.video-content .videos .content, .breaking-news > .overflow, .hero-shot, .hero-indicator-wrapper, .news-wrapper, .news-content, .overflowed-images, .promotion, .footer-links li p:first-child{
+.thumb-wrapper, .video-content .videos .content, .breaking-news > .overflow, .hero-shot, .hero-indicator-wrapper, .news-wrapper, .news-content, .overflowed-images, .promotion, .footer-links li p:first-child{
 	overflow: hidden;
 }
 
@@ -431,10 +431,23 @@ ul, li, body, p, .hero-wrapper h5{
 	overflow:hidden;
 }*/
 
-.video-content .videos .content .video-list > li{
-	width:145px;
+.video-content .videos .content .video-list > li, .thumb-wrapper{
+	width:135px;
 	height:80px;
-	.transition(width, 0.5s, ease-out);
+	display:block;
+	.transition(all, 0.5s, ease-out);
+}
+
+.video-list:hover > li{
+	.opacity(0);
+	display:none;
+	width:0px;
+	height:0px;
+}
+
+.video-list > li:hover{
+	.opacity(1);
+	display:block;
 }
 
 .breaking-news .circle, .counter ul li{
@@ -462,7 +475,7 @@ ul, li, body, p, .hero-wrapper h5{
 }
 
 .video-content .videos .content .thumb{
-	width: 145px;
+	width: 135px;
 }
 
 .hero-wrapper, .youre-watching .title{
@@ -494,7 +507,7 @@ ul, li, body, p, .hero-wrapper h5{
 	width: 505px;
 }
 
-.video-content .videos, .video-content .videos .content ul li:hover, .thumb-wrapper{
+.content, .video-content .videos, .video-content .videos .content ul li:hover, .thumb-wrapper:hover{
 	width:650px;
 }
 
