@@ -27,8 +27,24 @@ $(function(){
 	});
 		
 	var counter = 0;
-	$.each(".video-list > li", function(){
-		$(this).attr("data-counter", counter);
+	$.each($(".video-list > li"), function(i, item){
+		$(item).attr("data-counter", counter);
 		counter++;
 	});
+	
+	$(".video-list > li").mouseover(function(){
+		$(this).addClass("selected");
+		setTimeout("toggleVideos()", 500);
+	}).mouseout(function(){
+		$(this).removeClass("selected");
+		setTimeout("toggleVideos()", 500);
+	});
 });
+
+function toggleVideos(){
+	if($(".selected")[0]){
+		$(".video-list > li:not(.selected)").css("display", "none");
+	}else{
+		$(".video-list > li").css("display", "block");
+	}
+}
